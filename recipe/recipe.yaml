@@ -12,7 +12,7 @@ source:
   sha256: 7f086b9053f28e734c8b776171de5d3663c146c9f9f34a6f27def2a111fc7923
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -24,7 +24,7 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - pybind11        
+        - pybind11
   host:
     - sofa-devel ${{ major_minor }}.*
     - sofa-python3 ${{ major_minor }}.*
@@ -45,7 +45,7 @@ tests:
       include:
         - SofaGLFW/SofaGLFW/config.h
         - SofaImGui/SofaImGui/config.h
-      lib: 
+      lib:
         - SofaGLFW
         - SofaImGui
   - script:
